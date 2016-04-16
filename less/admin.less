@@ -14,8 +14,12 @@
     position: absolute;
     top: 0;
     height: 100%;
-    padding-top: 70px;
+    padding-top: 80px;
     border-right: 1px solid #ddd;
+
+    @media only screen and (min-width: @screen-phone) {
+        max-width: 270px;
+    }
 
     .list-group-title {
         text-size: 100%;
@@ -26,4 +30,5 @@
 }
 
 .content {
+
 }
