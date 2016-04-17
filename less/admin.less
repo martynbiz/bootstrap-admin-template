@@ -1,4 +1,4 @@
-@import 'bootstrap';
+@import 'bootstrap.less';
 
 .navbar {
     .navbar-right {
@@ -14,11 +14,45 @@
     position: absolute;
     top: 0;
     height: 100%;
-    padding-top: 80px;
     border-right: 1px solid #ddd;
+    padding: 80px 0px 0px 0px;
+    background: @asbestos;
 
-    @media only screen and (min-width: @screen-phone) {
-        max-width: 270px;
+    // @media only screen and (min-width: @screen-phone) {
+    //     max-width: 270px;
+    // }
+
+    ul {
+        margin: 0px;
+        padding: 0px;
+        list-style: none;
+
+        li {
+            padding-bottom: 5px;
+
+            a {
+                display: block;
+                line-height: @line-height-base;
+                text-decoration: none;
+                padding: @padding-base-vertical @padding-base-horizontal;
+                color: @gray-lighter;
+                background: darken(@asbestos, 10%);
+
+                &:hover {
+
+                }
+            }
+        }
+
+        .collapse {
+            a {
+                background: @asbestos;
+
+                &:hover {
+
+                }
+            }
+        }
     }
 
     .list-group-title {
