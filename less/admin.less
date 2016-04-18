@@ -1,5 +1,11 @@
 @import 'bootstrap.less';
 
+@padding-top-base: 50px;
+
+body {
+    background: @gray-lighter;
+}
+
 .navbar {
     .navbar-right {
         .badge {
@@ -15,12 +21,9 @@
     top: 0;
     height: 100%;
     border-right: 1px solid #ddd;
-    padding: 80px 0px 0px 0px;
+    padding: 0px;
+    padding-top: calc(@padding-top-base + 30px);
     background: @asbestos;
-
-    // @media only screen and (min-width: @screen-phone) {
-    //     max-width: 270px;
-    // }
 
     ul {
         margin: 0px;
@@ -41,12 +44,18 @@
                 &:hover {
 
                 }
+
+                .badge {
+                    float: right;
+                    background: @gray-lighter;
+                    color: @asbestos;
+                }
             }
         }
 
         .collapse {
             a {
-                background: @asbestos;
+                background: darken(@asbestos, 3%);
 
                 &:hover {
 
@@ -64,5 +73,5 @@
 }
 
 .content {
-
+    padding-top: @padding-top-base;
 }
